@@ -42,14 +42,15 @@ export const initialInvoiceData: IInvoice = {
   },
   items: [],
   taxRate: 10,
-  terms:
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  terms: '50% advance to get your work done.',
   notes: '',
   footerMessages: 'Thank you for your business!',
   paymentInfo: {
     accountName: '',
     accountNumber: '',
     bankAccount: '',
+    bankBranch: '',
+    ifscCode: '',
   },
 };
 

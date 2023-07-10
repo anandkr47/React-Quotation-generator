@@ -38,7 +38,7 @@ const InvoicePaymentInfo: FC<Props> = ({ paymentInfo }) => {
         {'Payment Info :'}
       </Typography>
       <Box style={{ height: editable ? 26 : 20, ...lineStyle }}>
-        <Typography style={{ width: editable ? '140px' : '80px' }}>Account :</Typography>
+        <Typography style={{ width: editable ? '140px' : '80px' }}>A/C Holders Name :</Typography>
         {editable ? (
           <EditableText
             sx={{ width: '100%' }}
@@ -51,7 +51,7 @@ const InvoicePaymentInfo: FC<Props> = ({ paymentInfo }) => {
         )}
       </Box>
       <Box style={{ height: editable ? 26 : 20, ...lineStyle }}>
-        <Typography style={{ width: editable ? '140px' : '80px' }}>A/C Name :</Typography>
+        <Typography style={{ width: editable ? '140px' : '80px' }}>A/C Number :</Typography>
         {editable ? (
           <EditableText
             sx={{ width: '100%' }}
@@ -64,7 +64,7 @@ const InvoicePaymentInfo: FC<Props> = ({ paymentInfo }) => {
         )}
       </Box>
       <Box style={{ height: editable ? 26 : 20, ...lineStyle }}>
-        <Typography style={{ width: editable ? '140px' : '80px' }}>Bank Details :</Typography>
+        <Typography style={{ width: editable ? '140px' : '80px' }}>Bank Name :</Typography>
         {editable ? (
           <EditableText
             sx={{ width: '100%' }}
@@ -74,6 +74,27 @@ const InvoicePaymentInfo: FC<Props> = ({ paymentInfo }) => {
           />
         ) : (
           <Typography>{paymentInfo.bankAccount}</Typography>
+        )}
+      </Box>
+      <Box style={{ height: editable ? 26 : 20, ...lineStyle }}>
+        <Typography style={{ width: editable ? '140px' : '80px' }}>Branch Name :</Typography>
+        {editable ? (
+          <EditableText
+            sx={{ width: '100%' }}
+            name="bankBranch"
+            value={paymentInfo.bankBranch}
+            onChange={handleChange}
+          />
+        ) : (
+          <Typography>{paymentInfo.bankBranch}</Typography>
+        )}
+      </Box>
+      <Box style={{ height: editable ? 26 : 20, ...lineStyle }}>
+        <Typography style={{ width: editable ? '140px' : '80px' }}>ifsc Code :</Typography>
+        {editable ? (
+          <EditableText sx={{ width: '100%' }} name="ifscCode" value={paymentInfo.ifscCode} onChange={handleChange} />
+        ) : (
+          <Typography>{paymentInfo.ifscCode}</Typography>
         )}
       </Box>
     </Box>

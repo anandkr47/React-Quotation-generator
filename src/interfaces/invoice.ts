@@ -16,11 +16,14 @@ export interface IInvoicePaymentInfo {
   accountName?: string;
   accountNumber?: string;
   bankAccount?: string;
+  bankBranch?: string;
+  ifscCode?: string;
 }
 
 export interface IInvoice {
   fileName?: string;
   logo?: string;
+  clientlogo?: string;
   sender: IInvoiceSender;
   recipient: IInvoiceRecipient;
   invoiceNumber: string;

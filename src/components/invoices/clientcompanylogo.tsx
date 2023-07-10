@@ -18,7 +18,7 @@ import { useGenerator } from '@/hooks/useGenerator';
 import { DeleteOutline } from '@mui/icons-material';
 
 interface Props {
-  logo?: string;
+  clientlogo?: string;
   onUploadImage: (image: string) => void;
 }
 
@@ -65,7 +65,7 @@ const Placeholder: FC<PlaceholderProps> = ({ hasLogo, children }) => {
   );
 };
 
-const InvoiceCompanyLogo: FC<Props> = ({ logo, onUploadImage }) => {
+const ClientCompanyLogo: FC<Props> = ({ clientlogo, onUploadImage }) => {
   const { editable } = useGenerator();
 
   const inputRef = useRef<HTMLInputElement>(null);
@@ -102,7 +102,7 @@ const InvoiceCompanyLogo: FC<Props> = ({ logo, onUploadImage }) => {
         sx={{ maxWidth: 160, height: 'auto', mb: 2, cursor: 'pointer', position: 'relative', zIndex: 1 }}
         onClick={handleUpload}
       >
-        {logo ? (
+        {clientlogo ? (
           <Placeholder hasLogo={true}>
             <>
               <MuiBox
@@ -110,15 +110,15 @@ const InvoiceCompanyLogo: FC<Props> = ({ logo, onUploadImage }) => {
                 sx={{ display: 'inline-flex', alignItems: 'center', flexDirection: 'column', justifyContent: 'center' }}
               >
                 <UploadFileIcon sx={{ fontSize: 32, mb: 1.5 }} />
-                <Typography>Upload Invoice Logo</Typography>
+                <Typography>Upload Client Logo</Typography>
               </MuiBox>
-              <MuiBox component="img" src={logo} sx={{ width: '100%' }} alt="Invoice logo" />
+              <MuiBox component="img" src={clientlogo} sx={{ width: '100%' }} alt="Client company logo" />
             </>
           </Placeholder>
         ) : (
           <Placeholder hasLogo={false}>
             <UploadFileIcon sx={{ fontSize: 32, mb: 1.5 }} />
-            <Typography>Upload Invoice Logo</Typography>
+            <Typography>Upload Client Logo</Typography>
           </Placeholder>
         )}
 
@@ -133,19 +133,19 @@ const InvoiceCompanyLogo: FC<Props> = ({ logo, onUploadImage }) => {
           sx={{ display: 'none' }}
         />
       </MuiBox>
-      {logo && (
+      {clientlogo && (
         <MuiBox sx={{ mb: 2 }}>
           <StyledButton onClick={onRemoveImage} size="small" color="dark" startIcon={<DeleteOutline />}>
-            Remove Company Logo
+            Remove Client Logo
           </StyledButton>
         </MuiBox>
       )}
     </Box>
   ) : (
     <Box style={{ maxWidth: 110, height: 'auto', marginBottom: '12px' }}>
-      {logo ? <Image source={String(logo)} /> : <Box style={{ height: '10px' }} />}
+      {clientlogo ? <Image source={String(clientlogo)} /> : <Box style={{ height: '10px' }} />}
     </Box>
   );
 };
 
-export default InvoiceCompanyLogo;
+export default ClientCompanyLogo;

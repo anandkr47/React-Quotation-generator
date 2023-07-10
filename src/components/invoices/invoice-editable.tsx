@@ -19,6 +19,7 @@ import InvoiceTitle from '../invoices/invoice-title';
 import InvoicePaymentInfo from './invoice-payment-info';
 import InvoiceItemHeader from './invoice-line-item-header';
 import InvoiceCompanyLogo from '../invoices/invoice-company-logo';
+import ClientCompanyLogo from './clientcompanylogo';
 import InvoiceTermAndConditions from './invoice-term-and-condition';
 import InvoiceRecipient from '@/components/invoices/invoice-recipient';
 
@@ -89,6 +90,7 @@ const InvoiceEditable: FC = () => {
               <InvoiceSender from={invoice.sender} handleOpenDialog={onOpenDialogEditSender} />
             </Box>
             <Box style={{ display: 'flex', flex: 1, flexDirection: 'column', marginLeft: '20px' }}>
+              {/*<ClientCompanyLogo clientlogo={invoice.clientlogo} onUploadImage={updateLogo} /> */}
               <InvoiceRecipient recipient={invoice.recipient} handleOpenDialog={onOpenDialogEditRecipient} />
               <InvoiceInfo invoiceNumber={invoice.invoiceNumber} date={invoice.date} due={String(invoice.due)} />
             </Box>
