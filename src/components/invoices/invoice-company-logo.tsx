@@ -110,7 +110,7 @@ const InvoiceCompanyLogo: FC<Props> = ({ logo, onUploadImage }) => {
                 sx={{ display: 'inline-flex', alignItems: 'center', flexDirection: 'column', justifyContent: 'center' }}
               >
                 <UploadFileIcon sx={{ fontSize: 32, mb: 1.5 }} />
-                <Typography>Upload Invoice Logo</Typography>
+                <Typography>Upload Quotation Logo</Typography>
               </MuiBox>
               <MuiBox component="img" src={logo} sx={{ width: '100%' }} alt="Invoice logo" />
             </>
@@ -118,7 +118,7 @@ const InvoiceCompanyLogo: FC<Props> = ({ logo, onUploadImage }) => {
         ) : (
           <Placeholder hasLogo={false}>
             <UploadFileIcon sx={{ fontSize: 32, mb: 1.5 }} />
-            <Typography>Upload Invoice Logo</Typography>
+            <Typography>Upload Quotation Logo</Typography>
           </Placeholder>
         )}
 

@@ -83,6 +83,7 @@ const InvoicePaymentInfo: FC<Props> = ({ paymentInfo }) => {
             sx={{ width: '100%' }}
             name="bankBranch"
             value={paymentInfo.bankBranch}
+            //value=""
             onChange={handleChange}
           />
         ) : (
@@ -92,7 +93,13 @@ const InvoicePaymentInfo: FC<Props> = ({ paymentInfo }) => {
       <Box style={{ height: editable ? 26 : 20, ...lineStyle }}>
         <Typography style={{ width: editable ? '140px' : '80px' }}>ifsc Code :</Typography>
         {editable ? (
-          <EditableText sx={{ width: '100%' }} name="ifscCode" value={paymentInfo.ifscCode} onChange={handleChange} />
+          <EditableText
+            sx={{ width: '100%' }}
+            name="ifscCode"
+            value={paymentInfo.ifscCode}
+            // value=""
+            onChange={handleChange}
+          />
         ) : (
           <Typography>{paymentInfo.ifscCode}</Typography>
         )}

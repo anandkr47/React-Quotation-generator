@@ -35,6 +35,7 @@ const InvoiceTermAndConditions: FC<Props> = ({ terms }) => {
           maxRows={5}
           name="quantity"
           value={terms}
+          // value="50% advance to get your work done"
           onChange={handleChange}
         />
       ) : (
