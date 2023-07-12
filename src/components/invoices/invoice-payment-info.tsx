@@ -37,8 +37,8 @@ const InvoicePaymentInfo: FC<Props> = ({ paymentInfo }) => {
       <Typography variant="h6" style={{ fontWeight: 'bold', marginBottom: editable ? 1 : createSpacing(1) }}>
         {'Payment Info :'}
       </Typography>
-      <Box style={{ height: editable ? 26 : 20, ...lineStyle }}>
-        <Typography style={{ width: editable ? '140px' : '80px' }}>A/C Holders Name :</Typography>
+      <Box style={{ height: editable ? 26 : 18, ...lineStyle }}>
+        <Typography style={{ width: editable ? '140px' : '70px' }}>A/C Holders Name :</Typography>
         {editable ? (
           <EditableText
             sx={{ width: '100%' }}
@@ -50,8 +50,8 @@ const InvoicePaymentInfo: FC<Props> = ({ paymentInfo }) => {
           <Typography>{paymentInfo.accountNumber}</Typography>
         )}
       </Box>
-      <Box style={{ height: editable ? 26 : 20, ...lineStyle }}>
-        <Typography style={{ width: editable ? '140px' : '80px' }}>A/C Number :</Typography>
+      <Box style={{ height: editable ? 26 : 18, ...lineStyle }}>
+        <Typography style={{ width: editable ? '140px' : '70px' }}>A/C Number :</Typography>
         {editable ? (
           <EditableText
             sx={{ width: '100%' }}
@@ -63,8 +63,8 @@ const InvoicePaymentInfo: FC<Props> = ({ paymentInfo }) => {
           <Typography>{paymentInfo.accountName}</Typography>
         )}
       </Box>
-      <Box style={{ height: editable ? 26 : 20, ...lineStyle }}>
-        <Typography style={{ width: editable ? '140px' : '80px' }}>Bank Name :</Typography>
+      <Box style={{ height: editable ? 26 : 18, ...lineStyle }}>
+        <Typography style={{ width: editable ? '140px' : '70px' }}>Bank Name :</Typography>
         {editable ? (
           <EditableText
             sx={{ width: '100%' }}
@@ -76,8 +76,8 @@ const InvoicePaymentInfo: FC<Props> = ({ paymentInfo }) => {
           <Typography>{paymentInfo.bankAccount}</Typography>
         )}
       </Box>
-      <Box style={{ height: editable ? 26 : 20, ...lineStyle }}>
-        <Typography style={{ width: editable ? '140px' : '80px' }}>Branch Name :</Typography>
+      <Box style={{ height: editable ? 26 : 18, ...lineStyle }}>
+        <Typography style={{ width: editable ? '140px' : '70px' }}>Branch Name :</Typography>
         {editable ? (
           <EditableText
             sx={{ width: '100%' }}
@@ -90,8 +90,8 @@ const InvoicePaymentInfo: FC<Props> = ({ paymentInfo }) => {
           <Typography>{paymentInfo.bankBranch}</Typography>
         )}
       </Box>
-      <Box style={{ height: editable ? 26 : 20, ...lineStyle }}>
-        <Typography style={{ width: editable ? '140px' : '80px' }}>ifsc Code :</Typography>
+      <Box style={{ height: editable ? 26 : 18, ...lineStyle }}>
+        <Typography style={{ width: editable ? '140px' : '70px' }}>ifsc Code :</Typography>
         {editable ? (
           <EditableText
             sx={{ width: '100%' }}
