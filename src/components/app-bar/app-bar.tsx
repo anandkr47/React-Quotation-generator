@@ -1,11 +1,8 @@
 import { FC, useEffect, useState } from 'react';
-
-// Mui components.
 import { AppBar as MuiAppBar, Container, IconButton, Typography, Box } from '@mui/material';
-
-// Config.
+import { grey, blue, red, green } from '@mui/material/colors';
 import { AppConfig } from '@/config';
-import { grey } from '@mui/material/colors';
+import { Reddit } from '@mui/icons-material';
 
 const AppBar: FC = () => {
   const [zIndex, setZIndex] = useState<number>(3);
@@ -28,9 +25,21 @@ const AppBar: FC = () => {
           <Typography variant="h2" component="h1" color="primary.contrastText" sx={{ mb: 1 }}>
             {AppConfig.appName}
           </Typography>
+          
           <Typography sx={{ color: grey[100] }}>{AppConfig.appDescription}</Typography>
         </Box>
-        <Box sx={{ ml: 'auto' }}></Box>
+        <Box sx={{ ml: 'auto' }}>
+          <IconButton color="inherit" aria-label="Login" sx={{ color: blue[50] }}>
+            Login
+          </IconButton>
+          <IconButton
+            color="inherit"
+            aria-label="Register"
+            sx={{ color: grey[50], '&:hover': { backgroundColor: red[500] } }}
+          >
+            Register
+          </IconButton>
+        </Box>
       </Container>
     </MuiAppBar>
   );
